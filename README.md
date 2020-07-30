@@ -1,13 +1,13 @@
-**Sova-Rasa-Module** - отдельный модуль, подключаемый к виджету. Он используется для описания сценариев и правил работы с диалогами.
+**Sova-Rasa-Module** is separate module that connects to the widget. It is used to describe scripts and dialog rules.
 
 ## Install
-Для установки Sova-Rasa-Module введите следующую команду в терминал:
+For install Sova-Rasa-Module enter next command in the terminal:
 ```
 npm i --save Sova-Rasa-Module
 ```
 
 ## Quick start
-Для быстрого старта Sova-Rasa-Module введите следующую команду в терминал:
+For quick start Sova-Rasa-Module enter next command in the terminal:
 ```
 import ckRasaInit from  'Sova-Rasa-Module'  
 const rasaModule = ckRasaInit(rasaConfig) 
@@ -15,9 +15,9 @@ const rasaModule = ckRasaInit(rasaConfig)
  
  # Description
  ## API method chatRequest
- В Sova-Rasa-Module есть один метод: chatRequest, по структуре совпадающий с методом [chatRequest (DL)](https://github.com/sovaai/chatKit-dl-module "Read me"). Метод отвечает за отправку сообщений пользователем.
+Sova-Rasa-Module has a method "chatRequest". It coincides in structure with a method [chatRequest (DL)](https://github.com/sovaai/chatKit-dl-module "Read me"). This method is responsible for sending messages by the user.
 
-### Типизация data:
+### typification of data:
 ```
 ChatRequestData {
   text: string
@@ -25,27 +25,27 @@ ChatRequestData {
 }
 ```
 
-### Пример data:
+### Example data:
 ```
 data = {
    text: 'Hello World!!'
 }
 ```
 
-### Пример вызова метода
+### Example of calling a method
 ```
 moduleDispatcher('chatRequest',{text:'Hello World!!'})
 ```
 
-# Использование moduleDispatcher
-moduleDispatcher осуществляет переключение на выбранный метод и передает туда необходимые данные.   
-moduleDispatcher включает в себя:   
-* reset *(сброс данных)*  
-* chatRequest *(отправка сообщений пользователем)*  
-* chatInit *(инициализаия диалога)*  
+# Using a moduleDispatcher
+moduleDispatcher select method and transmits necessary data to it.
+moduleDispatcher includes:   
+* reset *(reseting data)*  
+* chatRequest *(sending messages by the user)*  
+* chatInit *(chat initialization)*  
 
 # Rasa config
-Конфигурационный файл включает в себя:   
+Configuration file includes:   
 * uiEvents
 * moduleEvents
-* Rasa Api Url (адрес обращения где развернута Rasa)
+* Rasa Api Url (case address where Rasa is deployed)
