@@ -48,4 +48,4 @@ moduleDispatcher('chatRequest',{text:'Hello World!!'})
 Configuration file includes:   
 * uiEvents
 * moduleEvents
-* Rasa Api Url (case address where Rasa is deployed)
+* Rasa Api Url *(case address where Rasa is deployed)*
