@@ -48,13 +48,13 @@ const rasaConfig = {
 | [reset](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/reset.md "Read about this method")                     | Reset dialogue                   |
 
 
-## DL.ModuleDispatcher
+## Rasa.ModuleDispatcher
 `moduleDispatcher` - method of event management.   
 `moduleDispatcher` select method and transmits necessary data to it.  
 
 For example:
 ```javascript
 import moduleInit from 'ck-rasa'   
-const ck-rasa = moduleInit(dlConfig)   
+const CK Rasa = moduleInit(dlConfig)   
 ck-rasa.moduleDispatcher('chatInit', { clientConfig: { siteLang: 'ru' } })
 ```
