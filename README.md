@@ -18,24 +18,24 @@ const rasaModule = ckRasaInit(rasaConfig)
 Configuration file includes:   
 ```javascript
 const rasaConfig = {
- info: {
- greetingPhrase: string,
- },
- api?: {
- rasaURL?: string,
- },
- moduleEvents?: {
- chatInit: (module: RasaModule, data: ChatInitData) => void,
- chatRequest: (module: RasaModule, data: ChatRequestData) => void,
- reset: (module: RasaModule, data: ChatInitData) => void,
- },
- uiEvents?: {
- sendMessage?: (data: SendMessageData) => void,
- uiManagment?: (uiManagmentEvent: UIManagmentEvents, data: UIManagmentData) => void,
- notifications?: (notificationsEvent: NotificationsEvents, data: NotificationsData) => void,
- modules?: (modulesEvent: ModulesEvents , data: ModulesData)=> void,
- }
- }
+  info: {
+    greetingPhrase: string,
+  },
+  api?: {
+    rasaURL?: string,
+  },
+  moduleEvents?: {
+    chatInit: (module: RasaModule, data: ChatInitData) => void,
+    chatRequest: (module: RasaModule, data: ChatRequestData) => void,
+    reset: (module: RasaModule, data: ChatInitData) => void,
+  },
+  uiEvents?: {
+    sendMessage?: (data: SendMessageData) => void,
+    uiManagment?: (uiManagmentEvent: UIManagmentEvents, data: UIManagmentData) => void,
+    notifications?: (notificationsEvent: NotificationsEvents, data: NotificationsData) => void,
+    modules?: (modulesEvent: ModulesEvents , data: ModulesData)=> void,
+  }
+}
  ```
 
 ## API methods
@@ -43,9 +43,9 @@ const rasaConfig = {
 
 | API method                                                                                                                        |                                  | 
 |-----------------------------------------------------------------------------------------------------------------------------------|----------------------------------| 
-| [chatInit](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/chatInit.md "Read about this method")               | Dialog Initialization            |
-| [chatRequest](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/chatRequest.md "Read about this method")         | Sending user messages            |
-| [reset](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/reset.md "Read about this method")                     | Reset dialogue                   |
+| [chatInit](https://github.com/sovaai/chatKit-rasa-module/blob/master/docs/apimethods/chatInit.md "Read about this method")        | Dialog Initialization            |
+| [chatRequest](https://github.com/sovaai/chatKit-rasa-module/blob/master/docs/apimethods/chatRequest.md "Read about this method")  | Sending user messages            |
+| [reset](https://github.com/sovaai/chatKit-rasa-module/blob/master/docs/apimethods/reset.md "Read about this method")              | Reset dialogue                   |
 
 
 ## Rasa.ModuleDispatcher
