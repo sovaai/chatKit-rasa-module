@@ -1,21 +1,21 @@
-**Sova-Rasa-Module** is separate module that connects to the widget. It is used to describe scripts and dialog rules.
+**ck-rasa** is separate module that connects to the widget. It is used to describe scripts and dialog rules.
 
 ## Install
 For install Sova-Rasa-Module enter next command:
 ```javascript
-npm i --save Sova-Rasa-Module
+npm i ck-rasa
 ```
 
 ## Quick start
 For quick start Sova-Rasa-Module enter next command:
 ```
-import ckRasaInit from  'Sova-Rasa-Module'  
+import ckModuleInit from 'ck-rasa'
 const rasaModule = ckRasaInit(rasaConfig) 
  ```
  
  # Description
  ## API method chatRequest
-Sova-Rasa-Module has a method `chatRequest`, that coincides in structure with a method [chatRequest (DL)](https://github.com/sovaai/chatKit-dl-module "Read me"). This method is responsible for sending messages by the user.
+`ck-rasa` has a method `chatRequest`, that coincides in structure with a method [chatRequest (DL)](https://github.com/sovaai/chatKit-dl-module "Read me"). This method is responsible for sending messages by the user.
 
 ### typification of data:
 ```javascript
