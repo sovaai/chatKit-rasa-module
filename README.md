@@ -1,51 +1,60 @@
 **ck-rasa** is separate module that connects to the widget. It is used to describe scripts and dialog rules.
 
 ## Install
-For install Sova-Rasa-Module enter next command:
+For install `ck-rasa` enter next command:
 ```javascript
 npm i ck-rasa
 ```
 
 ## Quick start
-For quick start Sova-Rasa-Module enter next command:
+For quick start `ck-rasa` enter next command:
 ```
 import ckModuleInit from 'ck-rasa'
 const rasaModule = ckRasaInit(rasaConfig) 
  ```
  
- # Description
- ## API method chatRequest
-`ck-rasa` has a method `chatRequest`, that coincides in structure with a method [chatRequest (DL)](https://github.com/sovaai/chatKit-dl-module "Read me"). This method is responsible for sending messages by the user.
-
-### typification of data:
-```javascript
-ChatRequestData {
-  text: string
-  context?: RandomContext
-}
-```
-
-### Example data:
-```javascript
-data = {
-   text: 'Hello World!!'
-}
-```
-
-### Example of calling a method
-```javascript
-moduleDispatcher('chatRequest',{text:'Hello World!!'})
-```
-
-# Using a moduleDispatcher
-`moduleDispatcher` select method and transmits necessary data to it.
-`moduleDispatcher` includes:   
-* reset *(reseting data)*  
-* chatRequest *(sending messages by the user)*  
-* chatInit *(chat initialization)*  
-
-# Rasa config
+# Description
+## Rasa config
 Configuration file includes:   
-* uiEvents
-* moduleEvents
-* Rasa Api Url *(case address where Rasa is deployed)*
+```javascript
+const rasaConfig = {
+ info: {
+ greetingPhrase: string,
+ },
+ api?: {
+ rasaURL?: string,
+ },
+ moduleEvents?: {
+ chatInit: (module: RasaModule, data: ChatInitData) => void,
+ chatRequest: (module: RasaModule, data: ChatRequestData) => void,
+ reset: (module: RasaModule, data: ChatInitData) => void,
+ },
+ uiEvents?: {
+ sendMessage?: (data: SendMessageData) => void,
+ uiManagment?: (uiManagmentEvent: UIManagmentEvents, data: UIManagmentData) => void,
+ notifications?: (notificationsEvent: NotificationsEvents, data: NotificationsData) => void,
+ modules?: (modulesEvent: ModulesEvents , data: ModulesData)=> void,
+ }
+ }
+ ```
+
+## API methods
+`ck-rasa` has next API methods:
+
+| API method                                                                                                                        |                                  | 
+|-----------------------------------------------------------------------------------------------------------------------------------|----------------------------------| 
+| [chatInit](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/chatInit.md "Read about this method")               | Dialog Initialization            |
+| [chatRequest](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/chatRequest.md "Read about this method")         | Sending user messages            |
+| [reset](https://github.com/sovaai/chatKit-dl-module/blob/master/APImethods/reset.md "Read about this method")                     | Reset dialogue                   |
+
+
+## DL.ModuleDispatcher
+`moduleDispatcher` - method of event management.   
+`moduleDispatcher` select method and transmits necessary data to it.  
+
+For example:
+```javascript
+import moduleInit from 'ck-rasa'   
+const ck-rasa = moduleInit(dlConfig)   
+ck-rasa.moduleDispatcher('chatInit', { clientConfig: { siteLang: 'ru' } })
+```
