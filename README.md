@@ -55,6 +55,6 @@ const rasaConfig = {
 For example:
 ```javascript
 import moduleInit from 'ck-rasa'   
-const CK Rasa = moduleInit(dlConfig)   
-ck-rasa.moduleDispatcher('chatInit', { clientConfig: { siteLang: 'ru' } })
+const ckRasa = moduleInit(dlConfig)   
+ckRasa.moduleDispatcher('chatInit', { clientConfig: { siteLang: 'ru' } })
 ```
