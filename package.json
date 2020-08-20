@@ -1,0 +1,66 @@
+{
+  "name": "ck-rasa",
+  "version": "0.0.0",
+  "description": "SOVA dialog module opensoucre lib",
+  "homepage": "https://sova.ai",
+  "author": {
+    "name": "sova.ai",
+    "gitHub": "https://github.com/sovaai"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "commit-all": "git add . && git-cz",
+    "changelog": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+  },
+  "keywords": [
+    "SOVA",
+    "chat-kit-module"
+  ],
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@types/node": "^13.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "@wessberg/rollup-plugin-ts": "^1.2.21",
+    "commitizen": "^4.0.3",
+    "concurrently": "^5.1.0",
+    "conventional-changelog-cli": "^2.0.31",
+    "cz-conventional-changelog": "^3.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "rollup": "^2.0.6",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.nanosemantics.ru:sova.ai/sova-chat-kit/ck-rasa.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {}
+}
